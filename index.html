@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Photobooth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📸 Photobooth Time!</h1>
+  
+  <div class="camera">
+    <video id="video" autoplay></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <img id="photo" src="" alt="Captured photo">
+  </div>
+
+  <div class="controls">
+    <button id="start">Start Camera</button>
+    <button id="snap">Take Photo</button>
+    <button id="download">Download</button>
+  </div>
+
+  <audio id="countdown-sound" src="public/audio/countdown.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

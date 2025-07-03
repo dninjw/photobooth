@@ -2,11 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Photobooth</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #d6c6a8; 
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: #f5f0e1;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .hidden { display: none; }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+    video, canvas {
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    #countdown-display {
+      font-size: 48px;
+      font-weight: bold;
+      color: #6b4c3b;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>📸 Photobooth Time!</h1>
+  <div class="container">
+   <div id="welcome-screen"> 
+    <h1>📸 Photobooth Time!</h1>
+    <p>Get ready to snap your photos like a star</p>
+    <button onclick="showLayourOptions()">Start</button>
+   </div>
+
+  <div> id="layout-screen" class="hidden">
+    <h2>Select layout</h2>
+    <button onclick="selectLayout('4cut')>4-cut</button>
+    <button onclick="selectLayout('3cut')>3-cut</button>
+    <button onclick="selectLayout('2x2')>2x2</button>
+    <br>
+    <button onlick="showWebcamOptions()">Next</button>
+    
+    
   
   <div class="camera">
     <video id="video" autoplay></video>

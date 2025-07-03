@@ -24,3 +24,15 @@ video, canvas, img {
   font-size: 16px;
   cursor: pointer;
 }
+
+.countdown-text {
+  position: absolute;
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%);
+  font-size: 100px
+  font-weight: bold;
+  color: red;
+  z-index: 999;
+  display: none;
+}

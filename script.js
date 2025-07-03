@@ -5,7 +5,7 @@ const snap = document.getElementById('snap');
 const start = document.getElementById('start');
 const download = document.getElementById('download');
 const countdownSound = document.getElementById('countdown-sound');
-const countdownText = document.gentlementById('countdown');
+const countdownText = document.getElementById('countdown');
 
 start.onclick = async () => {
   const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -45,5 +45,4 @@ download.onclick = () => {
   link.download = 'photo.png';
   link.href = photo.src;
   link.click();
-};
 };
